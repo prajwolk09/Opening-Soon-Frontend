@@ -1,0 +1,205 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to new Thelamandu color palette */
+  --background: #f7e8d9; /* Light cream background */
+  --foreground: #000000; /* Black text */
+  --card: #fbebbe; /* Light yellow for cards */
+  --card-foreground: #000000; /* Black text on cards */
+  --popover: #fbebbe; /* Light yellow for popovers */
+  --popover-foreground: #000000; /* Black text on popovers */
+  --primary: #bc3908; /* Deep orange for primary actions */
+  --primary-foreground: #f7e8d9; /* Light cream text on primary */
+  --secondary: #e69d2c; /* Golden yellow for secondary */
+  --secondary-foreground: #000000; /* Black text on secondary */
+  --muted: #fbebbe; /* Light yellow for muted backgrounds */
+  --muted-foreground: #9e7448; /* Brown for muted text */
+  --accent: #f38218; /* Bright orange for accents */
+  --accent-foreground: #000000; /* Black text on accents */
+  --destructive: #aa2e0e; /* Dark red for destructive actions */
+  --destructive-foreground: #f7e8d9; /* Light cream text */
+  --border: #e69d2c; /* Golden border */
+  --input: #fbebbe; /* Light yellow for inputs */
+  --ring: #f38218; /* Orange for focus rings */
+  --chart-1: #bc3908;
+  --chart-2: #e69d2c;
+  --chart-3: #f38218;
+  --chart-4: #9e7448;
+  --chart-5: #bf4c1a;
+  --radius: 0.5rem;
+  --sidebar: #f7e8d9;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #bc3908;
+  --sidebar-primary-foreground: #f7e8d9;
+  --sidebar-accent: #e69d2c;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #e69d2c;
+  --sidebar-ring: #f38218;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #f7e8d9;
+  --card: #9e7448;
+  --card-foreground: #f7e8d9;
+  --popover: #9e7448;
+  --popover-foreground: #f7e8d9;
+  --primary: #f38218;
+  --primary-foreground: #000000;
+  --secondary: #e69d2c;
+  --secondary-foreground: #000000;
+  --muted: #9e7448;
+  --muted-foreground: #f7e8d9;
+  --accent: #bc3908;
+  --accent-foreground: #f7e8d9;
+  --destructive: #aa2e0e;
+  --destructive-foreground: #f7e8d9;
+  --border: #9e7448;
+  --input: #9e7448;
+  --ring: #f38218;
+  --chart-1: #f38218;
+  --chart-2: #e69d2c;
+  --chart-3: #bc3908;
+  --chart-4: #bf4c1a;
+  --chart-5: #9e7448;
+  --sidebar: #000000;
+  --sidebar-foreground: #f7e8d9;
+  --sidebar-primary: #f38218;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #e69d2c;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #9e7448;
+  --sidebar-ring: #f38218;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom animations for the landing page */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(243, 130, 24, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(243, 130, 24, 0.6);
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate 20s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-background {
+  background: linear-gradient(-45deg, #f7e8d9, #fbebbe, #e69d2c, #f38218);
+  background-size: 400% 400%;
+  animation: backgroundMove 15s ease infinite;
+}
+
+.cursor-follow {
+  transition: transform 0.1s ease-out;
+}
