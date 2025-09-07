@@ -130,8 +130,8 @@ export default function Hero() {
 
         {/* Description */}
         <p className="font-sans text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed text-pretty">
-          Experience the authentic taste of Nepals's bustling streets. From
-          steaming momos to spicy chatpate, we're preparing to bring you the
+          Experience the authentic taste of Nepal&apos;s bustling streets. From
+          steaming momos to spicy chatpate, we&apos;re preparing to bring you the
           most beloved flavors of Nepal.
         </p>
         {/* 

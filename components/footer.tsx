@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="text-center mb-8">
           <h3 className="font-serif text-2xl font-bold text-primary mb-4">Thelamandu</h3>
           <p className="font-sans text-muted-foreground/80 max-w-2xl mx-auto text-pretty">
-            From the heart of the Himalayas to your table. We're crafting an authentic Nepali dining experience that
+            From the heart of the Himalayas to your table. We&apos;re crafting an authentic Nepali dining experience that
             celebrates the rich flavors and warm hospitality of Nepal.
           </p>
         </div>
